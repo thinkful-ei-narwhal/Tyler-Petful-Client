@@ -1,7 +1,15 @@
-import './index.css'
+import "./index.css";
+import App from "./App/App";
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, BrowserRouter } from "react-router-dom";
+import { UserContextProvider } from "./context/UserContext";
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Root from './root/Root'
-
-ReactDOM.render(<Root />, document.getElementById('root'))
+ReactDOM.render(
+  <Router>
+    <UserContextProvider>
+      <App />
+    </UserContextProvider>
+  </Router>,
+  document.getElementById("root")
+);
