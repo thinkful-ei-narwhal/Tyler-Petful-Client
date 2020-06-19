@@ -13,7 +13,7 @@ When I go to the FIFO adoption agency site
 - I see a meaningful picture related to the description.
 - I see a button for starting the adoption process.
 
-2. As a user interested in adopting pets, I want to get more information
+2. (Complete) As a user interested in adopting pets, I want to get more information
    on each pet so that I can make an informed decision about who to adopt.
 
 Acceptance criteria
@@ -25,7 +25,7 @@ When I visit the adoption page, I can see:
 - The pet's name, gender, age, and breed.
 - A story of the pet's journey to the shelter
 
-3. As a user interested in adopting pets,
+3. (Complete) As a user interested in adopting pets,
    I want to see the pets that I can adopt.
 
 Acceptance criteria
@@ -39,11 +39,11 @@ Acceptance criteria
 
 When I visit the adoption page:
 
-- I can see a list of other people currently in line.
-- I can submit my name and be added to the end of the line.
+- I can see a list of other people currently in line (Yes).
+- I can submit my name and be added to the end of the line (Yes).
 - When I am not at the beginning of the line, I cannot see an option to adopt a pet.
-- For demo purposes: Once I join the line, I can see other pets being adopted until I am at the front of the line.
-- Every five seconds, the user at the front of the line should be removed from the line and one of the pets up for adoption should disappear.
+- For demo purposes: Once I join the line, I can see other pets being adopted until I am at the front of the line (Yes).
+- Every five seconds, the user at the front of the line should be removed from the line and one of the pets up for adoption should disappear(Yes).
 - When I am at the front of the line, a new user should be added to the line behind me every five seconds until there are a total of five users in line.
 
 5. As a user interested in adopting pets, I want to adopt a pet.

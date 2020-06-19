@@ -4,26 +4,31 @@ const PeopleService = {
   getPeople() {
     return fetch(`${config.REACT_APP_API_BASE}/people`)
       .then((res) => res.json())
-      .then((people) => {
-        return people;
+      .then((data) => {
+        return data.people;
       });
   },
   addMe(newName) {
-    return fetch(`${config.API_ENDPOINT}/people`, {
+    return fetch(`${config.REACT_APP_API_BASE}/people`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newName),
+      body: JSON.stringify({ name: newName }),
     }).then((res) => {
-      if (!res.json()) {
-        alert("Name could not be added. Check connection and try again");
+      if (!res.ok) {
+        return res.json().then((e) => Promise.reject(e));
       }
-      alert("You have been added to the adoption queue");
+      return res.json();
     });
   },
-  deleteMe(name) {
-    return fetch(`${config.API_ENDPOINT}/people/${name}`, {
+  deleteMe() {
+    return fetch(`${config.REACT_APP_API_BASE}/people`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
+    }).then((res) => {
+      if (!res.ok) {
+        return res.json().then((e) => Promise.reject(e));
+      }
+      return res.json();
     });
   },
 };

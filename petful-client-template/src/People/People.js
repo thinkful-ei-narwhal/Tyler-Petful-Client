@@ -5,22 +5,32 @@ import PeopleService from "../services/PeopleService";
 class PeopleList extends Component {
   static contextType = UserContext;
 
+  componentDidMount() {
+    PeopleService.getPeople().then((people) => this.context.setPeople(people));
+  }
+
   render() {
     return (
       <div className="people-sidebar">
-        <ul>
-          {this.context.peopleList.map((p) => (
-            <li>{p}</li>
+        <ul className="people-ul">
+          {this.context.peopleList.map((p, i) => (
+            <li key={i}>{p}</li>
           ))}
         </ul>
-        <form className="signup-form">
-          <input type="text" className="signup-name" id="inputname" />
+        <form
+          className="signup-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            this.context.submitAddMe(e);
+          }}
+        >
           <input
-            type="submit"
-            className="signup-btn"
-            value="Add Me"
-            onClick={(e) => this.context.setName(e)}
+            type="text"
+            className="signup-name"
+            id="inputname"
+            name="name"
           />
+          <input type="submit" className="signup-btn" />
         </form>
       </div>
     );

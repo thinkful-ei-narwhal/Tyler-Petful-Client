@@ -15,6 +15,26 @@ const PetService = {
         return data.cat;
       });
   },
+  delDog() {
+    return fetch(`${config.REACT_APP_API_BASE}/pets?type=dog`, {
+      method: "DELETE",
+    }).then((res) => {
+      if (!res.ok) {
+        return res.json().then((e) => Promise.reject(e));
+      }
+      return Promise.resolve();
+    });
+  },
+  delCat() {
+    return fetch(`${config.REACT_APP_API_BASE}/pets?type=cat`, {
+      method: "DELETE",
+    }).then((res) => {
+      if (!res.ok) {
+        return res.json().then((e) => Promise.reject(e));
+      }
+      return Promise.resolve();
+    });
+  },
 };
 
 export default PetService;
