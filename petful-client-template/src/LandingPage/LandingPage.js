@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import UserContext from "../context/UserContext";
 import PetService from "../services/PetService";
 
@@ -31,6 +30,7 @@ export default class LandingPage extends Component {
         <p>{this.context.currentDog.story}</p>
         <button
           hidden={!this.context.isUserTurn}
+          className="landing-btn"
           onClick={() => {
             this.context.deleteDog();
             this.context.setUserTurn(false);
@@ -50,6 +50,7 @@ export default class LandingPage extends Component {
         <p>{this.context.currentCat.gender}</p>
         <p>{this.context.currentCat.story}</p>
         <button
+          className="landing-btn"
           hidden={!this.context.isUserTurn}
           onClick={() => {
             this.context.deleteCat();
@@ -66,12 +67,16 @@ export default class LandingPage extends Component {
   render() {
     return (
       <div className="landingpage">
-        <h2>I want to adopt a...</h2>
+        <h2 className="landingtitle">I want to adopt a...</h2>
         <div className="dogdiv">
           <img src={this.context.currentDog.imageURL} />
           <p>{`Name: ${this.context.currentDog.name}`},</p>
           <p> {`Age: ${this.context.currentDog.age}`} </p>
-          <button name="Dog Details" onClick={this.unhideDog}>
+          <button
+            className="landing-btn"
+            name="Dog Details"
+            onClick={this.unhideDog}
+          >
             Dog Details
           </button>
           {!this.state.hiddenDog && this.dogDetails()}
@@ -82,7 +87,11 @@ export default class LandingPage extends Component {
             <p>{`Name: ${this.context.currentCat.name}`},</p>
             <p> {`Age: ${this.context.currentCat.age}`} </p>
           </p>
-          <button name="Cat Details" onClick={this.unhideCat}>
+          <button
+            className="landing-btn"
+            name="Cat Details"
+            onClick={this.unhideCat}
+          >
             Cat Details
           </button>
           {!this.state.hiddenCat && this.catDetails()}

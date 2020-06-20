@@ -1,0 +1,66 @@
+.main-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.real-main-div {
+  background-color: antiquewhite;
+}
+
+.title {
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+img {
+  max-width: 50%;
+  min-width: 100px;
+  border: solid 1rem lightblue;
+  border-radius: 1rem;
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2);
+}
+
+.landingpage {
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 60%;
+  min-width: 200px;
+}
+
+.landing-btn {
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.2);
+}
+
+.landing-btn:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+h1 {
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .landingtitle {
+    font-size: 1.2rem;
+  }
+  .landing-btn {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .main-div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

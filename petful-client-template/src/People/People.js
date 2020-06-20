@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import UserContext from "../context/UserContext";
 import PeopleService from "../services/PeopleService";
+import "./People.css";
 
 class PeopleList extends Component {
   static contextType = UserContext;
@@ -12,11 +13,7 @@ class PeopleList extends Component {
   render() {
     return (
       <div className="people-sidebar">
-        <ul className="people-ul">
-          {this.context.peopleList.map((p, i) => (
-            <li key={i}>{p}</li>
-          ))}
-        </ul>
+        <h3>Sign Up List</h3>
         <form
           className="signup-form"
           onSubmit={(e) => {
@@ -32,6 +29,12 @@ class PeopleList extends Component {
           />
           <input type="submit" className="signup-btn" />
         </form>
+
+        <ul className="people-ul">
+          {this.context.peopleList.map((p, i) => (
+            <li key={i}>{p}</li>
+          ))}
+        </ul>
       </div>
     );
   }

@@ -3,8 +3,8 @@ import { Route, Switch } from "react-router-dom";
 import LandingPage from "../LandingPage/LandingPage";
 import PeopleList from "../People/People";
 import PeopleService from "../services/PeopleService";
-import PetService from "../services/PetService";
 import UserContext from "../context/UserContext";
+import "./App.css";
 
 class App extends Component {
   static contextType = UserContext;
@@ -28,8 +28,6 @@ class App extends Component {
         this.i++;
         this.context.addPerson(name.name);
       });
-      //show buttons hidden={!userTurn}
-      //redeclare interval when "adopt" is chosen
       if (this.i == 4) {
         clearInterval(this.interval);
       }
@@ -59,12 +57,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="main-div">
-        <h1>Petful - Adoption Agency</h1>
-        <PeopleList />
-        <Switch>
-          <Route exact path={"/"} component={LandingPage} />
-        </Switch>
+      <div className="real-main-div">
+        <h1 class="title">Petful - Adoption Agency</h1>
+        <div className="main-div">
+          <PeopleList />
+          <Switch>
+            <Route exact path={"/"} component={LandingPage} />
+          </Switch>
+        </div>
       </div>
     );
   }

@@ -1,0 +1,36 @@
+.people-sidebar {
+  width: 30%;
+  font-size: 1.5rem;
+  margin-right: auto;
+  padding: 1.5rem;
+  background-color: lightblue;
+  height: 100%;
+}
+
+.signup-name {
+  width: 100%;
+}
+
+.people-ul {
+  list-style: none;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-left: -22px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.signup-form {
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .people-sidebar {
+    width: 80%;
+    margin: auto;
+  }
+}
