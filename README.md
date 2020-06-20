@@ -1,12 +1,12 @@
 # Petful Client
 
-# Live-Link Client: https://petful-client-xi.vercel.app/
-# Live-Link Server: https://gentle-lowlands-66849.herokuapp.com/
-# GitHub Server: https://github.com/thinkful-ei-narwhal/Petful-Isaac-Tyler-Server
-# Pair: Isaac Elesia && Tyler Sharp
-# Summary: Users can select pets for adoption. One user at a time may adopt, and the results are live!
-# Tech: React, Node, HTML, CSS, Javascript
-# User Stories
+## Live-Link Client: https://petful-client-xi.vercel.app/
+## Live-Link Server: https://gentle-lowlands-66849.herokuapp.com/
+## GitHub Server: https://github.com/thinkful-ei-narwhal/Petful-Isaac-Tyler-Server
+## Pair: Isaac Elesia && Tyler Sharp
+## Summary: Users can select pets for adoption. One user at a time may adopt, and the results are live!
+## Tech: React, Node, HTML, CSS, Javascript
+## User Stories
 
 1. As a pet lover, I want to visit the FIFO pet adoption site
    so that I can get more information about the adoption process.
