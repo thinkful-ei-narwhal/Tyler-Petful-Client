@@ -14,7 +14,7 @@ export class AdoptPage extends Component {
     return (
       <Fragment>
         <h1>Petful - Adopt!</h1>
-        <h2>Creating Happy Pet Families since 2020</h2>
+        <h2>Adopt a pet today!</h2>
         <p>
           Enter your name to get started. When it's your turn, you may adopt!
         </p>
