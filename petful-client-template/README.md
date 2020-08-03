@@ -1,59 +1,27 @@
-# Petful Client
+# Application
 
-# User Stories
+Petful
 
-1. As a pet lover, I want to visit the FIFO pet adoption site
-   so that I can get more information about the adoption process.
+# Developer
 
-Acceptance criteria
+Tyler Sharp
 
-When I go to the FIFO adoption agency site
+# Links
 
-- I see a description of the adoption process.
-- I see a meaningful picture related to the description.
-- I see a button for starting the adoption process.
+Live Link: https://petful-client-xi.vercel.app
 
-2. (Complete) As a user interested in adopting pets, I want to get more information
-   on each pet so that I can make an informed decision about who to adopt.
+Server Link: https://tyler-sharp-petful-server.herokuapp.com/
 
-Acceptance criteria
+Client Repo: https://github.com/thinkful-ei-narwhal/Tyler-Petful-Client.git
 
-When I visit the adoption page, I can see:
+Server Repo: https://github.com/thinkful-ei-narwhal/Tyler-Petful-Server.git
 
-- An image of the pet;
-- A physical description of the pet;
-- The pet's name, gender, age, and breed.
-- A story of the pet's journey to the shelter
+# Summary
 
-3. (Complete) As a user interested in adopting pets,
-   I want to see the pets that I can adopt.
+This is a demo of an adoption agency that lets one user at a time select a pet to adopt. Enter your name, wait your turn, and then you may adopt a pet :)
 
-Acceptance criteria
+# Tech Stack
 
-When I visit the adoption page, I can only see the
-pet that is next in line to be adopted.
-
-4. As a user interested in adopting pets, I want to get in line to adopt.
-
-Acceptance criteria
-
-When I visit the adoption page:
-
-- I can see a list of other people currently in line (Yes).
-- I can submit my name and be added to the end of the line (Yes).
-- When I am not at the beginning of the line, I cannot see an option to adopt a pet.
-- For demo purposes: Once I join the line, I can see other pets being adopted until I am at the front of the line (Yes).
-- Every five seconds, the user at the front of the line should be removed from the line and one of the pets up for adoption should disappear(Yes).
-- When I am at the front of the line, a new user should be added to the line behind me every five seconds until there are a total of five users in line.
-
-5. As a user interested in adopting pets, I want to adopt a pet.
-
-Acceptance criteria
-
-When I am at the front of the line:
-
-- I can see an option to adopt a pet.
-- When I choose to adopt a pet:
-- I see a confirmation that I have adopted the pet.
-- I see my name removed from the line.
-- I see the pet I adopted is removed from view and replaced with another pet.
+React
+Node / Express
+HTML, CSS
