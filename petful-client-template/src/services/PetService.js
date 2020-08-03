@@ -1,38 +1,37 @@
 import config from "../config";
 
 const PetService = {
-  getDog() {
-    return fetch(`${config.REACT_APP_API_BASE}/pets`)
-      .then((res) => res.json())
+  getPets() {
+    let error;
+    return fetch(`${config.API_ENDPOINT}/pets`, {
+      method: "GET",
+      headers: {},
+    })
+      .then((res) => {
+        if (!res.ok) {
+          error = { code: res.status };
+        }
+        return res.json();
+      })
       .then((data) => {
-        return data.dog;
+        if (error) {
+          error.message = data.message;
+          return Promise.reject(error);
+        }
+        return data;
       });
   },
-  getCat() {
-    return fetch(`${config.REACT_APP_API_BASE}/pets`)
-      .then((res) => res.json())
-      .then((data) => {
-        return data.cat;
-      });
-  },
-  delDog() {
-    return fetch(`${config.REACT_APP_API_BASE}/pets?type=dog`, {
+  deletePet(type) {
+    let error;
+    return fetch(`${config.API_ENDPOINT}/pets/${type}`, {
       method: "DELETE",
-    }).then((res) => {
-      if (!res.ok) {
-        return res.json().then((e) => Promise.reject(e));
+      headers: {},
+    }).then((data) => {
+      if (error) {
+        error.message = data.message;
+        return Promise.reject(error);
       }
-      return Promise.resolve();
-    });
-  },
-  delCat() {
-    return fetch(`${config.REACT_APP_API_BASE}/pets?type=cat`, {
-      method: "DELETE",
-    }).then((res) => {
-      if (!res.ok) {
-        return res.json().then((e) => Promise.reject(e));
-      }
-      return Promise.resolve();
+      return data;
     });
   },
 };
