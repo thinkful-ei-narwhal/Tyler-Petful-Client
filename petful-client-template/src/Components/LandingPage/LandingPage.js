@@ -6,7 +6,7 @@ export class LandingPage extends Component {
     return (
       <Fragment>
         <h1>Petful</h1>
-        <h2>Creating Happy Pet Families since 2020</h2>
+        <h2>Adopt a Pet Today!</h2>
 
         <img
           className="adoptImg"
